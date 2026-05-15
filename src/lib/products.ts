@@ -10,7 +10,7 @@ export const products: Product[] = [
     originalPrice: 119.99,
     description:
       "Built for the toughest terrain, these trail runners feature a grippy outsole, breathable mesh upper, and rock plate protection. Ideal for everything from muddy single-track to rocky ridgelines.",
-    image: "https://picsum.photos/seed/shoes/600/600",
+    image: "https://images.unsplash.com/photo-1581888748626-2a3f240a6f9f?w=600&h=600&fit=crop&auto=format",
     rating: 4.7,
     reviewCount: 243,
     inStock: true,
@@ -24,7 +24,7 @@ export const products: Product[] = [
     price: 249.99,
     description:
       "Track pace, distance, heart rate, and elevation with this advanced GPS sports watch. Multi-sport modes, 7-day battery life, and water resistance to 50m.",
-    image: "https://picsum.photos/seed/watch/600/600",
+    image: "https://images.unsplash.com/photo-1539874754764-5a96559165b0?w=600&h=600&fit=crop&auto=format",
     rating: 4.8,
     reviewCount: 512,
     inStock: true,
@@ -38,7 +38,7 @@ export const products: Product[] = [
     price: 45.0,
     description:
       "6mm thick non-slip mat made from eco-friendly natural rubber. Alignment lines printed on both sides help you perfect your form. Includes carrying strap.",
-    image: "https://picsum.photos/seed/yoga/600/600",
+    image: "https://images.unsplash.com/photo-1646239646963-b0b9be56d6b5?w=600&h=600&fit=crop&auto=format",
     rating: 4.5,
     reviewCount: 189,
     inStock: true,
@@ -53,7 +53,7 @@ export const products: Product[] = [
     originalPrice: 99.99,
     description:
       "20L daypack with a 2L hydration reservoir, multiple organization pockets, trekking pole attachments, and a padded back panel for all-day comfort on the trail.",
-    image: "https://picsum.photos/seed/pack/600/600",
+    image: "https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=600&h=600&fit=crop&auto=format",
     rating: 4.6,
     reviewCount: 97,
     inStock: true,
@@ -67,7 +67,7 @@ export const products: Product[] = [
     price: 129.99,
     description:
       "IPX7 waterproof earbuds with 9-hour battery life, active noise cancellation, and sport fins for a secure fit during the most intense workouts.",
-    image: "https://picsum.photos/seed/earbuds/600/600",
+    image: "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=600&h=600&fit=crop&auto=format",
     rating: 4.4,
     reviewCount: 378,
     inStock: true,
@@ -81,7 +81,7 @@ export const products: Product[] = [
     price: 54.99,
     description:
       "Graduated compression tights reduce muscle fatigue and speed recovery. Four-way stretch fabric with moisture-wicking technology and reflective details for visibility.",
-    image: "https://picsum.photos/seed/tights/600/600",
+    image: "https://images.unsplash.com/photo-1774414048822-918499640462?w=600&h=600&fit=crop&auto=format",
     rating: 4.3,
     reviewCount: 156,
     inStock: true,
@@ -95,7 +95,7 @@ export const products: Product[] = [
     price: 34.99,
     description:
       "Complete recovery kit with a high-density foam roller, massage ball, and resistance bands. Target sore muscles post-workout and improve flexibility.",
-    image: "https://picsum.photos/seed/roller/600/600",
+    image: "https://images.unsplash.com/photo-1591741535585-9c4f52b3f13f?w=600&h=600&fit=crop&auto=format",
     rating: 4.6,
     reviewCount: 221,
     inStock: true,
@@ -109,7 +109,7 @@ export const products: Product[] = [
     price: 69.99,
     description:
       "Lightweight carbon fiber poles with anti-shock system, quick-lock mechanism, and ergonomic cork grips. Pack down to 65cm for easy storage.",
-    image: "https://picsum.photos/seed/poles/600/600",
+    image: "https://images.unsplash.com/photo-1632411316785-33d395035a3c?w=600&h=600&fit=crop&auto=format",
     rating: 4.7,
     reviewCount: 88,
     inStock: false,
