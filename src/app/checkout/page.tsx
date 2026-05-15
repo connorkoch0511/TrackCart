@@ -30,7 +30,7 @@ const EMPTY_FORM: FormData = {
 
 export default function CheckoutPage() {
   const router = useRouter();
-  const { items, subtotal, clearCart } = useCart();
+  const { items, subtotal, clearCart, isHydrated } = useCart();
   const [form, setForm] = useState<FormData>(EMPTY_FORM);
   const [orderComplete, setOrderComplete] = useState(false);
   const [orderId, setOrderId] = useState("");
@@ -49,8 +49,8 @@ export default function CheckoutPage() {
   }, [items, subtotal, hasTrackedBeginCheckout]);
 
   useEffect(() => {
-    if (items.length === 0 && !orderComplete) router.push("/cart");
-  }, [items, orderComplete, router]);
+    if (isHydrated && items.length === 0 && !orderComplete) router.push("/cart");
+  }, [isHydrated, items, orderComplete, router]);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -172,10 +172,12 @@ function Field({
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   type?: string; placeholder?: string; required?: boolean;
 }) {
+  const id = `field-${name}`;
   return (
     <div>
-      <label className="block text-xs font-medium text-gray-600 mb-1">{label}</label>
+      <label htmlFor={id} className="block text-xs font-medium text-gray-600 mb-1">{label}</label>
       <input
+        id={id}
         type={type}
         name={name}
         value={value}

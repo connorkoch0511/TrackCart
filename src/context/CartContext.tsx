@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer, useState } from "react";
 import { CartItem, Product } from "@/types";
 import { dataLayer } from "@/lib/dataLayer";
 
@@ -51,6 +51,7 @@ interface CartContextValue {
   items: CartItem[];
   itemCount: number;
   subtotal: number;
+  isHydrated: boolean;
   addToCart: (product: Product, quantity?: number) => void;
   removeFromCart: (product: Product) => void;
   updateQuantity: (product: Product, quantity: number) => void;
@@ -61,12 +62,14 @@ const CartContext = createContext<CartContextValue | null>(null);
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(cartReducer, { items: [] });
+  const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
     try {
       const saved = localStorage.getItem("trackcart_cart");
       if (saved) dispatch({ type: "HYDRATE", items: JSON.parse(saved) });
     } catch {}
+    setIsHydrated(true);
   }, []);
 
   useEffect(() => {
@@ -106,7 +109,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <CartContext.Provider value={{ items: state.items, itemCount, subtotal, addToCart, removeFromCart, updateQuantity, clearCart }}>
+    <CartContext.Provider value={{ items: state.items, itemCount, subtotal, isHydrated, addToCart, removeFromCart, updateQuantity, clearCart }}>
       {children}
     </CartContext.Provider>
   );
